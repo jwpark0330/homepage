@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>온라인예약 | 원클리닉</title>
+  <meta name="description" content="원클리닉 온라인 상담 예약. 100% 예약제로 대기 없이 원장 직접 상담.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reserve">
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">RESERVATION</div>
+      <h1>온라인예약</h1>
+      <p class="lead">희망 일정을 남겨주시면 확인 후 예약 확정 연락을 드립니다. 급한 예약은 전화 <a data-site="phone-link" href="#" style="color:var(--green-800);font-weight:700"></a>로 문의해 주세요.</p>
+      <p class="breadcrumb">홈 › 온라인예약</p>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="container" style="max-width:880px">
+      <form class="form-card reveal" data-form="온라인예약" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="r-name">이름 <span class="req">*</span></label><input id="r-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="r-phone">연락처 <span class="req">*</span></label><input id="r-phone" name="phone" type="tel" placeholder="010-0000-0000" autocomplete="tel" required></div>
+          <div class="field"><label for="r-date">희망일</label><input id="r-date" name="date" type="date"></div>
+          <div class="field"><label for="r-time">희망 시간</label>
+            <select id="r-time" name="time"><option value="">선택해 주세요</option><option>10:00 – 12:00</option><option>12:00 – 13:00</option><option>14:00 – 16:00</option><option>16:00 – 18:00</option><option>18:00 – 20:00</option></select></div>
+          <div class="field full"><label>관심 시술 (복수 선택)</label>
+            <div class="chk-group">
+              <label><input type="checkbox" name="concern" value="기미·잡티·색소"><span>기미·잡티·색소</span></label>
+              <label><input type="checkbox" name="concern" value="여드름·모공·흉터"><span>여드름·모공·흉터</span></label>
+              <label><input type="checkbox" name="concern" value="탄력·리프팅"><span>탄력·리프팅</span></label>
+              <label><input type="checkbox" name="concern" value="윤곽·볼륨"><span>윤곽·볼륨</span></label>
+              <label><input type="checkbox" name="concern" value="레이저 제모"><span>레이저 제모</span></label>
+              <label><input type="checkbox" name="concern" value="한방 다이어트·바디"><span>한방 다이어트·바디</span></label>
+            </div></div>
+          <div class="field"><label for="r-visit">방문 여부</label><select id="r-visit" name="visit"><option>첫 방문</option><option>재방문</option></select></div>
+          <div class="field"><label for="r-route">알게 된 경로</label><select id="r-route" name="route"><option value="">선택</option><option>네이버 검색</option><option>인스타그램</option><option>지인 소개</option><option>지나가다</option><option>기타</option></select></div>
+          <div class="field full"><label for="r-memo">상담 내용</label><textarea id="r-memo" name="memo" placeholder="고민 부위나 궁금한 점을 적어주세요."></textarea></div>
+          <div class="full agree" id="privacy">
+            <input type="checkbox" id="r-agree" name="agree" value="동의" required>
+            <div><label for="r-agree" style="font-weight:600;color:var(--ink)">개인정보 수집·이용에 동의합니다. (필수)</label>
+              <details><summary>개인정보처리방침 보기</summary>
+                <div class="policy">
+                  <b>수집 항목</b> 이름, 연락처, 희망 일정, 상담 내용<br>
+                  <b>수집 목적</b> 예약 확인 및 상담 안내<br>
+                  <b>보유 기간</b> 상담 완료 후 1년 (관계 법령에 따라 보존이 필요한 경우 해당 기간)<br>
+                  <b>동의 거부</b> 동의를 거부할 수 있으며, 이 경우 온라인 예약이 제한됩니다. 전화 예약은 가능합니다.<br>
+                  <b>개인정보 보호책임자</b> <span data-site="director"></span> 원장 · <span data-site="email"></span>
+                </div>
+              </details></div>
+          </div>
+        </div>
+        <button class="btn btn--primary" type="submit" style="width:100%;margin-top:32px;height:58px">예약 신청하기</button>
+        <p class="form-msg" role="status"></p>
+      </form>
+
+      <dl class="info-list" style="margin-top:56px">
+        <div><dt>진료시간</dt><dd><table class="hours-table"><tbody data-site="hours"></tbody></table></dd></div>
+        <div><dt>전화 예약</dt><dd><a data-site="phone-link" href="#"></a></dd></div>
+        <div><dt>카카오톡</dt><dd><a data-site="kakao-link" href="#" target="_blank" rel="noopener" class="link-more">카카오톡 채널로 상담하기 →</a></dd></div>
+        <div><dt>예약 변경</dt><dd>예약 변경·취소는 방문 하루 전까지 전화 또는 카카오톡으로 알려주세요.</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
